@@ -1,0 +1,1178 @@
+
+/* =====================================================
+   DRINKA | DESARROLLO WEB Y APLICACIONES
+   Identidad visual: creativa, cálida y contemporánea
+   Paleta: café, beige, verde y terracota
+===================================================== */
+
+/* ================= FUENTES ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+/* ================= VARIABLES ================= */
+
+:root {
+    --cafe-oscuro: #49352B;
+    --cafe: #8B674D;
+    --caramelo: #B9875D;
+    --beige: #D8C5AC;
+    --beige-claro: #EDE3D5;
+
+    --verde-bosque: #536B50;
+    --verde-salvia: #8DA181;
+    --verde-claro: #DCE3D5;
+
+    --terracota: #B96F50;
+    --terracota-claro: #F0DCD1;
+
+    --crema: #F7F3EC;
+    --blanco: #FFFFFF;
+
+    --texto: #51483F;
+    --texto-suave: #786F65;
+
+    --borde: rgba(73, 53, 43, .13);
+    --sombra: 0 18px 48px rgba(73, 53, 43, .10);
+
+    --radio: 26px;
+}
+
+
+/* ================= CONFIGURACIÓN GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    background: var(--crema);
+    color: var(--texto);
+    line-height: 1.75;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+::selection {
+    background: var(--verde-salvia);
+    color: var(--cafe-oscuro);
+}
+
+
+/* ================= ENCABEZADO ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: rgba(247, 243, 236, .94);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--borde);
+}
+
+.navbar {
+    width: min(1320px, 100%);
+    min-height: 88px;
+    margin: auto;
+    padding: 16px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+}
+
+.logo {
+    flex-shrink: 0;
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: 37px;
+    font-weight: 800;
+    letter-spacing: -2.8px;
+    line-height: 1;
+}
+
+.logo span {
+    color: var(--terracota);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 700;
+    transition: color .2s ease;
+}
+
+.menu a:hover {
+    color: var(--terracota);
+}
+
+.btn-menu,
+.btn-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--verde-bosque);
+    border-radius: 999px;
+    background: var(--verde-bosque);
+    color: var(--blanco);
+    font-weight: 800;
+    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.btn-menu {
+    flex-shrink: 0;
+    padding: 13px 22px;
+    font-size: 14px;
+}
+
+.btn-menu:hover,
+.btn-principal:hover {
+    background: var(--terracota);
+    border-color: var(--terracota);
+    box-shadow: 0 12px 25px rgba(185, 111, 80, .22);
+    transform: translateY(-3px);
+}
+
+
+/* ================= INICIO ================= */
+
+.inicio {
+    position: relative;
+    isolation: isolate;
+    width: min(1320px, 100%);
+    min-height: 710px;
+    margin: auto;
+    padding: 110px 42px 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+}
+
+.inicio::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 520px;
+    height: 520px;
+    top: 55px;
+    right: 15px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(141, 161, 129, .25),
+        rgba(216, 197, 172, .10) 62%,
+        transparent 72%
+    );
+}
+
+.inicio-contenido {
+    flex: 1.08;
+    max-width: 650px;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--terracota);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.inicio h1 {
+    margin-bottom: 27px;
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(48px, 5.6vw, 76px);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -3.8px;
+}
+
+.descripcion {
+    max-width: 590px;
+    margin-bottom: 35px;
+    color: var(--texto-suave);
+    font-size: 18px;
+    line-height: 1.85;
+}
+
+.btn-principal {
+    min-height: 54px;
+    padding: 14px 28px;
+    font-size: 15px;
+}
+
+.btn-secundario {
+    display: inline-flex;
+    align-items: center;
+    min-height: 54px;
+    margin-left: 16px;
+    color: var(--cafe-oscuro);
+    font-size: 15px;
+    font-weight: 800;
+    transition: color .2s ease;
+}
+
+.btn-secundario:hover {
+    color: var(--terracota);
+}
+
+.inicio-imagen {
+    flex: .92;
+    width: 100%;
+    max-width: 550px;
+}
+
+
+/* ================= MUESTRA DIGITAL DRINKA ================= */
+
+.mockup-drinka {
+    position: relative;
+    width: 100%;
+    min-height: 475px;
+    padding: 34px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-radius: 38px;
+    background:
+        radial-gradient(circle at 90% 8%, rgba(255,255,255,.65), transparent 28%),
+        linear-gradient(145deg, #E9DCCB 0%, #D5D9C8 48%, #A9B99F 100%);
+    color: var(--cafe-oscuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 28px 65px rgba(73, 53, 43, .14);
+}
+
+.mockup-drinka::after {
+    content: "D";
+    position: absolute;
+    right: -30px;
+    bottom: -125px;
+    color: rgba(255,255,255,.18);
+    font-family: "Manrope", sans-serif;
+    font-size: 330px;
+    font-weight: 800;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.mockup-encabezado,
+.mockup-pie {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.mockup-logo {
+    font-family: "Manrope", sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.mockup-etiqueta,
+.mockup-pie {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.mockup-contenido {
+    position: relative;
+    z-index: 1;
+    margin: 36px 0;
+}
+
+.mockup-subtitulo {
+    color: var(--verde-bosque);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+}
+
+.mockup-contenido h2 {
+    max-width: 420px;
+    margin: 15px 0;
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(34px, 4vw, 49px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.mockup-contenido > p:not(.mockup-subtitulo) {
+    max-width: 330px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.mockup-tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 27px;
+}
+
+.mockup-tarjeta {
+    min-height: 105px;
+    padding: 17px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 18px;
+    background: rgba(255,255,255,.58);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    backdrop-filter: blur(8px);
+}
+
+.mockup-tarjeta span {
+    color: var(--terracota);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.mockup-tarjeta strong {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.mockup-tarjeta small {
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.mockup-pie {
+    border-top: 1px solid rgba(73, 53, 43, .17);
+    padding-top: 18px;
+}
+
+
+/* ================= BANDA DE PRESENTACIÓN ================= */
+
+.servicios-resumen {
+    position: relative;
+    padding: 76px 28px;
+    overflow: hidden;
+    background: var(--verde-bosque);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.servicios-resumen::before,
+.servicios-resumen::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+}
+
+.servicios-resumen::before {
+    left: -65px;
+    top: -95px;
+}
+
+.servicios-resumen::after {
+    right: -60px;
+    bottom: -115px;
+}
+
+.servicios-resumen h2 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 12px;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.servicios-resumen p {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: auto;
+    color: rgba(255,255,255,.88);
+    font-size: 16px;
+}
+
+
+/* ================= SECCIONES GENERALES ================= */
+
+.seccion {
+    width: min(1320px, 100%);
+    margin: auto;
+    padding: 115px 42px;
+}
+
+.seccion > p:not(.etiqueta) {
+    max-width: 760px;
+    color: var(--texto-suave);
+    font-size: 16px;
+}
+
+.seccion h2 {
+    margin-bottom: 20px;
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+}
+
+.seccion h3 {
+    margin-top: 27px;
+    margin-bottom: 9px;
+    color: var(--verde-bosque);
+    font-family: "Manrope", sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.seccion-contenido {
+    position: relative;
+    max-width: 930px;
+    padding: 55px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.75);
+    border-radius: 32px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.seccion-contenido::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    top: -105px;
+    right: -75px;
+    border-radius: 50%;
+    background: var(--terracota-claro);
+    opacity: .75;
+    pointer-events: none;
+}
+
+.seccion-contenido > * {
+    position: relative;
+    z-index: 1;
+}
+
+.seccion-contenido p {
+    margin-bottom: 15px;
+    color: var(--texto-suave);
+    font-size: 16px;
+}
+
+
+/* ================= SECCIÓN NOSOTROS ================= */
+
+#nosotros {
+    position: relative;
+}
+
+#nosotros::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 70px;
+    right: 0;
+    width: 34%;
+    height: 72%;
+    border-radius: 45px 0 0 45px;
+    background: var(--beige-claro);
+}
+
+
+/* ================= SERVICIOS ================= */
+
+#servicios {
+    max-width: none;
+    padding-left: max(42px, calc((100% - 1236px) / 2));
+    padding-right: max(42px, calc((100% - 1236px) / 2));
+    background: #EEE8DE;
+}
+
+.tarjetas-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.tarjeta {
+    position: relative;
+    min-height: 235px;
+    padding: 34px;
+    overflow: hidden;
+    border: 1px solid rgba(73, 53, 43, .10);
+    border-radius: 26px;
+    background: var(--blanco);
+    box-shadow: 0 10px 28px rgba(73, 53, 43, .055);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: -45px;
+    bottom: -52px;
+    border-radius: 50%;
+    background: var(--verde-claro);
+    transition: transform .3s ease;
+}
+
+.tarjeta::after {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    right: 27px;
+    bottom: 25px;
+    border: 1px solid rgba(83,107,80,.22);
+    border-radius: 50%;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: rgba(83, 107, 80, .35);
+    box-shadow: var(--sombra);
+}
+
+.tarjeta:hover::before {
+    transform: scale(1.2);
+}
+
+.tarjeta h3 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 14px;
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.tarjeta p {
+    position: relative;
+    z-index: 1;
+    max-width: 330px;
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ================= PORTAFOLIO ================= */
+
+#portafolio .etiqueta {
+    color: var(--terracota);
+}
+
+.tarjetas-portafolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    margin-top: 48px;
+}
+
+.proyecto {
+    max-width: 590px;
+    padding: 20px;
+    border: 1px solid var(--borde);
+    border-radius: 30px;
+    background: var(--blanco);
+    box-shadow: 0 10px 30px rgba(73, 53, 43, .07);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--sombra);
+}
+
+.proyecto-imagen {
+    min-height: 285px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 21px;
+    background:
+        radial-gradient(circle at 80% 15%, rgba(255,255,255,.55), transparent 25%),
+        linear-gradient(135deg, var(--terracota-claro), var(--beige), var(--verde-claro));
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.proyecto h3 {
+    margin: 22px 5px 8px;
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.proyecto p {
+    margin: 0 5px;
+    color: var(--texto-suave);
+    font-size: 15px;
+}
+
+.categoria {
+    display: inline-block;
+    margin: 17px 5px 5px;
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: var(--verde-claro);
+    color: var(--verde-bosque);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ================= PLANES ================= */
+
+#planes {
+    max-width: none;
+    padding-left: max(42px, calc((100% - 1236px) / 2));
+    padding-right: max(42px, calc((100% - 1236px) / 2));
+    background: var(--verde-bosque);
+}
+
+#planes .etiqueta {
+    color: #E8C5A9;
+}
+
+#planes h2 {
+    color: var(--blanco);
+}
+
+#planes > p:not(.etiqueta) {
+    color: rgba(255,255,255,.82);
+}
+
+.tarjetas-planes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+    margin: 48px 0 28px;
+}
+
+.plan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 27px;
+    background: var(--crema);
+    box-shadow: 0 12px 28px rgba(30, 45, 29, .13);
+    transition: transform .25s ease;
+}
+
+.plan:hover {
+    transform: translateY(-7px);
+}
+
+.plan:nth-child(2) {
+    border: 2px solid var(--beige);
+    background: #F0E4D5;
+    transform: translateY(-10px);
+}
+
+.plan:nth-child(2):hover {
+    transform: translateY(-15px);
+}
+
+.plan h3 {
+    margin: 0 0 8px;
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.plan > p {
+    color: var(--texto-suave);
+    font-size: 15px;
+}
+
+.plan ul {
+    flex: 1;
+    margin: 25px 0;
+    padding-left: 21px;
+}
+
+.plan li {
+    margin-bottom: 12px;
+    color: var(--texto);
+    font-size: 15px;
+}
+
+.plan a {
+    display: inline-flex;
+    justify-content: center;
+    padding: 14px 19px;
+    border-radius: 999px;
+    background: var(--cafe-oscuro);
+    color: var(--blanco);
+    font-size: 14px;
+    font-weight: 800;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.plan a:hover {
+    transform: translateY(-2px);
+    background: var(--terracota);
+}
+
+
+/* ================= FORMULARIO ================= */
+
+#formulario-proyecto {
+    width: 100%;
+    max-width: 760px;
+    margin-top: 40px;
+    padding: 45px;
+    border: 1px solid var(--borde);
+    border-radius: 30px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+#formulario-proyecto label {
+    display: block;
+    margin: 20px 0 8px;
+    color: var(--cafe-oscuro);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+#formulario-proyecto input,
+#formulario-proyecto select,
+#formulario-proyecto textarea {
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 16px;
+    border: 1px solid #D6C2AA;
+    border-radius: 13px;
+    outline: none;
+    background: #FCFAF6;
+    color: var(--texto);
+    font-size: 15px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+#formulario-proyecto input:focus,
+#formulario-proyecto select:focus,
+#formulario-proyecto textarea:focus {
+    border-color: var(--verde-bosque);
+    box-shadow: 0 0 0 4px rgba(83, 107, 80, .13);
+}
+
+#formulario-proyecto textarea {
+    min-height: 145px;
+    resize: vertical;
+}
+
+#formulario-proyecto button {
+    width: 100%;
+    min-height: 55px;
+    margin-top: 27px;
+    padding: 14px 22px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--terracota);
+    color: var(--blanco);
+    font-weight: 800;
+    cursor: pointer;
+    transition: background .25s ease, transform .25s ease;
+}
+
+#formulario-proyecto button:hover {
+    transform: translateY(-3px);
+    background: var(--verde-bosque);
+}
+
+/* Estado del botón mientras se envía */
+#formulario-proyecto button:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#mensaje-formulario {
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+
+/* ================= CONTACTO ================= */
+
+#contacto {
+    position: relative;
+}
+
+.contacto-info {
+    max-width: 620px;
+    margin: 35px 0;
+    padding: 32px;
+    border: 1px solid rgba(73, 53, 43, .08);
+    border-radius: 24px;
+    background: var(--terracota-claro);
+}
+
+.contacto-info p {
+    margin-bottom: 10px;
+    color: var(--cafe-oscuro);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.contacto-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ================= PIE DE PÁGINA ================= */
+
+footer {
+    padding: 65px 24px;
+    background: var(--cafe-oscuro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+footer .logo {
+    color: var(--crema);
+    font-size: 42px;
+}
+
+footer .logo span {
+    color: #D89A78;
+}
+
+footer p {
+    margin-top: 12px;
+    color: rgba(255,255,255,.78);
+    font-size: 15px;
+}
+
+
+/* ================= TEXTO JUSTIFICADO ================= */
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Evitar justificar textos que deben estar centrados */
+.servicios-resumen p,
+footer p,
+.mockup-pie,
+.mockup-encabezado,
+.etiqueta {
+    text-align: center;
+}
+
+
+/* ================= CAMPO ANTISPAM ================= */
+
+.campo-antispam {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+
+/* ================= ACCESIBILIDAD ================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--terracota);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 18px 26px;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 13px 22px;
+    }
+
+    .inicio {
+        gap: 40px;
+        padding-top: 85px;
+        padding-bottom: 95px;
+    }
+
+    .inicio h1 {
+        font-size: clamp(43px, 5.5vw, 62px);
+    }
+
+    .tarjetas-servicios,
+    .tarjetas-planes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #servicios,
+    #planes {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 680px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        padding: 17px 20px;
+        gap: 17px;
+    }
+
+    .logo {
+        font-size: 33px;
+    }
+
+    .menu {
+        gap: 10px 15px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .btn-menu {
+        width: 100%;
+        padding: 12px 18px;
+    }
+
+    .inicio {
+        min-height: auto;
+        flex-direction: column;
+        gap: 42px;
+        padding: 75px 22px 85px;
+        text-align: center;
+    }
+
+    .inicio h1 {
+        font-size: clamp(42px, 11vw, 57px);
+        letter-spacing: -2.3px;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+    .inicio-imagen {
+        max-width: 100%;
+    }
+
+    .mockup-drinka {
+        min-height: 410px;
+        padding: 25px;
+        border-radius: 28px;
+    }
+
+    .mockup-contenido h2 {
+        font-size: 37px;
+    }
+
+    .mockup-tarjetas {
+        gap: 9px;
+    }
+
+    .mockup-tarjeta {
+        padding: 13px;
+    }
+
+    .mockup-pie {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .btn-principal {
+        width: 100%;
+    }
+
+    .btn-secundario {
+        display: flex;
+        justify-content: center;
+        margin: 13px 0 0;
+    }
+
+    .servicios-resumen {
+        padding: 58px 22px;
+    }
+
+    .seccion {
+        padding: 78px 22px;
+    }
+
+    .seccion h2 {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    .seccion-contenido {
+        padding: 30px 25px;
+        border-radius: 25px;
+    }
+
+    .tarjetas-servicios,
+    .tarjetas-planes {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .tarjeta,
+    .plan {
+        padding: 27px;
+    }
+
+    .plan:nth-child(2),
+    .plan:nth-child(2):hover {
+        transform: none;
+    }
+
+    .proyecto-imagen {
+        min-height: 220px;
+    }
+
+    #servicios,
+    #planes {
+        padding: 78px 22px;
+    }
+
+    #formulario-proyecto {
+        padding: 27px 22px;
+        border-radius: 24px;
+    }
+
+    .contacto-info {
+        padding: 24px;
+    }
+
+    footer {
+        padding: 48px 20px;
+    }
+}
+/* LOGOTIPO CON MASCOTA */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-gato {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.logo-texto {
+    color: var(--cafe-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: 37px;
+    font-weight: 800;
+    letter-spacing: -2.8px;
+    line-height: 1;
+}
+
+.logo-texto span {
+    color: var(--terracota);
+}
+
+@media (max-width: 680px) {
+    .logo-gato {
+        width: 68px;
+        height: 68px;
+    }
+
+    .logo-texto {
+        font-size: 32px;
+    }
+}
